@@ -4,6 +4,7 @@
   "description": "Server for WH40K Army List",
   "main": "server.js",
   "scripts": {
+    "start": "node src/app/server.js",
     "test": "test"
   },
   "dependencies": {
