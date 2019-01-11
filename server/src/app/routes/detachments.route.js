@@ -3,13 +3,6 @@ const router = express.Router();
 
 const detachments_controller = require('../controllers/detachments.controller');
 
-router.get('/test', (req, res) => {
-    res.json({'msg': 'Test response'});
-})
-
-router.get('/test2', detachments_controller.test2);
-router.get('/test3', detachments_controller.test3);
-
 router.get('/', (req, res) => {
     try {
         const list = detachments_controller.detachments_list();
@@ -25,7 +18,7 @@ router.get('/', (req, res) => {
     }
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:name', (req, res) => {
     try {
         const name = req.param('name');
         const detachment = detachments_controller.detachment(name);
