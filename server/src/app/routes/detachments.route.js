@@ -7,6 +7,9 @@ router.get('/test', (req, res) => {
     res.json({'msg': 'Test response'});
 })
 
+router.get('/test2', detachments_controller.test2);
+router.get('/test3', detachments_controller.test3);
+
 router.get('/', (req, res) => {
     try {
         const list = detachments_controller.detachments_list();

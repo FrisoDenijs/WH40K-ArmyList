@@ -2,6 +2,14 @@ const fs = require('fs');
 
 const detachments_list = JSON.parse(fs.readFileSync('../assets/json/detachments.json', 'utf8'));
 
+exports.test2 = function(req, res) {
+    res.json({'msg': 'Test response 2'});
+}
+
+exports.test3 = (req, res) => {
+    res.json({'msg': 'Test response 3'});
+}
+
 exports.detachments_list = function () {
     return detachments_list();
 }
