@@ -13,10 +13,8 @@ router.get('/:version', (req, res) => {
         res.json(list);
     }
     catch (err) {
-        console.log(err);
-        
         res.statusCode = 400;
-        res.statusMessage = err;
+        res.send(err);
     }
 });
 
@@ -30,9 +28,8 @@ router.get('/:version/:name', (req, res) => {
         res.json(detachment);
     }
     catch (err) {
-        console.error(err);
         res.statusCode = 400;
-        res.statusMessage = err;
+        res.send(err);
     }
 });
 
