@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Patrol Detachment",
+        "min": {
+            "hq": 1,
+            "troops": 1
+        },
+        "max": {
+            "hq": 2,
+            "troops": 3,
+            "elites": 2,
+            "fast-attack": 2,
+            "heavy-support": 2,
+            "flyers": 2
+        },
+        "dedicated-transports-for-each": 1,
+        "restrictions": "faction"
+    },
+    {
+        "name": "Battalion Detachment",
+        "min": {
+            "hq": 2,
+            "troops": 3
+        },
+        "max": {
+            "hq": 3,
+            "troops": 6,
+            "elites": 6,
+            "fast-attack": 3,
+            "heavy-support": 3,
+            "flyers": 2
+        },
+        "dedicated-transports-for-each": 1,
+        "restrictions": "faction",
+        "command-benefits": {
+            "command-points": 3
+        }
+    }
+]
