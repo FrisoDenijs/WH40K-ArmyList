@@ -8,8 +8,6 @@ const get_detachment_list = (version) => {
 }
 
 exports.detachments_list = (version) => {
-    console.log(version);
-    
     if(typeof version !== typeof 'string') {
         throw 'Version is not a string';
     }
