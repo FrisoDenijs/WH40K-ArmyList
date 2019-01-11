@@ -11,7 +11,7 @@ exports.test3 = (req, res) => {
 }
 
 exports.detachments_list = function () {
-    return detachments_list();
+    return detachments_list;
 }
 
 exports.detachment = function (det_name) {
