@@ -8,7 +8,7 @@ exports.detachments_list = function () {
 
 exports.detachment = function (det_name) {
     if(typeof det_name !== typeof 'string') {
-        throw 'Name is not a string'
+        throw 'Name is not a string';
     }
 
     const detachment = detachments_list.find((detachment) => {
@@ -18,7 +18,7 @@ exports.detachment = function (det_name) {
     });
 
     if(detachment === undefined) {
-        throw `Detachment "${det_name}" not found`
+        throw `Detachment "${det_name}" not found`;
     }
 
     return detachment;
