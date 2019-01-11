@@ -1,0 +1,40 @@
+{
+  "name": "wh40k-army-list-server",
+  "version": "0.0.1",
+  "description": "Server for WH40K Army List",
+  "main": "server.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "inversify": "^5.0.1",
+    "mongoose": "^5.3.4",
+    "reflect-metadata": "^0.1.12"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.0",
+    "@types/mongoose": "^5.2.19",
+    "@types/node": "^10.5.5",
+    "nodemon": "^1.18.3",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrisoDenijs/WH40K-ArmyList.git"
+  },
+  "keywords": [
+    "Warhammer",
+    "40000"
+  ],
+  "author": "Friso Denijs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrisoDenijs/WH40K-ArmyList/issues"
+  },
+  "homepage": "https://github.com/FrisoDenijs/WH40K-ArmyList#readme"
+}
