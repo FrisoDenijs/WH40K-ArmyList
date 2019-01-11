@@ -11,26 +11,22 @@ router.get('/', (req, res) => {
         res.json(list);
     }
     catch (err) {
-        console.error(err);
-        
-        // res.statusCode = 400;
-        // res.statusMessage = err;
+        res.statusCode = 400;
+        res.statusMessage = err;
     }
 });
 
 router.get('/:name', (req, res) => {
     try {
-        const name = req.param('name');
+        const name = req.params["name"];
         const detachment = detachments_controller.detachment(name);
 
         res.statusCode = 200;
         res.json(detachment);
     }
     catch (err) {
-        console.error(err);
-        
-        // res.statusCode = 400;
-        // res.statusMessage = err;
+        res.statusCode = 400;
+        res.statusMessage = err;
     }
 });
 
