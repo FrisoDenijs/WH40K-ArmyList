@@ -6,5 +6,6 @@ export enum Role {
     HeavySupport,
     Flyers,
     DedicatedTransport,
-    LordOfWar
+    LordOfWar,
+    Fortification
 }

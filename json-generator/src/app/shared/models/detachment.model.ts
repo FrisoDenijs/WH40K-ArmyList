@@ -2,8 +2,8 @@ import { Role as BattlefieldRole } from './role.model';
 
 export class Detachment {
     name: string;
-    min: DetachmentMin[];
-    max: DetachmentMax[];
+    detachmentMin: DetachmentMin[];
+    detachmentMax: DetachmentMax[];
     dedicatedTransportsForEach: number;
     restrictions: DetachmentRestriction[];
     commandBenefits: CommandBenefits;
