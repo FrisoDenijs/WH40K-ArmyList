@@ -2,19 +2,19 @@ import { Role as BattlefieldRole } from './role.model';
 
 export class Detachment {
     name: string;
-    detachmentMin: DetachmentMin[];
-    detachmentMax: DetachmentMax[];
+    minRoles: MinRole[];
+    maxRoles: MaxRole[];
     dedicatedTransportsForEach: number;
     restrictions: DetachmentRestriction[];
-    commandBenefits: CommandBenefits;
+    benefits: CommandBenefits;
 }
 
-export class DetachmentMin {
+export class MinRole {
     battlefieldRole: BattlefieldRole;
     amount: number;
 }
 
-export class DetachmentMax {
+export class MaxRole {
     battlefieldRole: BattlefieldRole;
     amount: number;
 }
