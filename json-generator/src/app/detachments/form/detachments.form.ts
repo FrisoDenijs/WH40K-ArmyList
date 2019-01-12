@@ -1,5 +1,5 @@
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
-import { Detachment } from '../../shared';
+import { Detachment, MaxRole } from '../../shared';
 
 export class DetachmentsForm extends FormGroup {
     constructor() {
@@ -14,7 +14,18 @@ export class DetachmentsForm extends FormGroup {
     }
 
     public getModel(): Detachment {
+        if (this.invalid) {
+            throw new Error('Detachment form is invalid');
+        }
+
         const detachment = new Detachment();
+
+        detachment.name = this.value.name;
+        detachment.dedicatedTransportsForEach = this.value.dedicatedTransportsForEach;
+        detachment.minRoles = this.value.minRoles;
+        detachment.maxRoles = this.value.maxRoles;
+        detachment.restrictions = this.value.restrictions;
+        detachment.benefits = this.value.benefits;
 
         return detachment;
     }
