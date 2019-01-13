@@ -44,6 +44,21 @@ export class DetachmentsForm extends FormGroup {
         const restrictions = this.get('restrictions') as FormArray;
         restrictions.push(new DetachmentRestrictionFormControl());
     }
+
+    public removeMinRole(index: number) {
+        const minRoles = this.get('minRoles') as FormArray;
+        minRoles.removeAt(index);
+    }
+
+    public removeMaxRole(index: number) {
+        const maxRoles = this.get('maxRoles') as FormArray;
+        maxRoles.removeAt(index);
+    }
+
+    public removeRestriction(index: number) {
+        const restrictions = this.get('restrictions') as FormArray;
+        restrictions.removeAt(index);
+    }
 }
 
 class MinRolesForm extends FormGroup {

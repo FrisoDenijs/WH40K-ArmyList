@@ -12,41 +12,45 @@
   <label>
     Minimum battlefield roles:
     <button type="button" (click)="detachmentForm.addMinRole()">Add</button>
-    <div formArrayName="minRoles" *ngFor="let item of detachmentForm.get('minRoles').controls; let i = index;">
-      <div [formGroupName]="i">
-        <select formControlName="battlefieldRole">
-          <!-- from https://stackoverflow.com/a/35750252/1984657 -->
-          <option *ngFor="let item of roles | enumKey" [value]="item.key">{{item.value}}</option>
-        </select>
-        <input type="number" formControlName="amount">
-      </div>
-      <br>
-    </div>
   </label>
+  <div formArrayName="minRoles" *ngFor="let item of detachmentForm.get('minRoles').controls; let i = index;">
+    <div [formGroupName]="i">
+      <select formControlName="battlefieldRole">
+        <!-- from https://stackoverflow.com/a/35750252/1984657 -->
+        <option *ngFor="let item of roles | enumKey" [value]="item.key">{{item.value}}</option>
+      </select>
+      <input type="number" formControlName="amount">
+      <button type="button" (click)="detachmentForm.removeMinRole(i)">Remove</button>
+    </div>
+    <br>
+  </div>
   <br>
   <label>
     Maximum battlefield roles:
     <button type="button" (click)="detachmentForm.addMaxRole()">Add</button>
-    <div formArrayName="maxRoles" *ngFor="let item of detachmentForm.get('maxRoles').controls; let i = index;">
-      <div [formGroupName]="i">
-        <select formControlName="battlefieldRole">
-          <option *ngFor="let item of roles | enumKey" [value]="item.key">{{item.value}}</option>
-        </select>
-        <input type="number" formControlName="amount">
-      </div>
-      <br>
-    </div>
   </label>
+  <div formArrayName="maxRoles" *ngFor="let item of detachmentForm.get('maxRoles').controls; let i = index;">
+    <div [formGroupName]="i">
+      <select formControlName="battlefieldRole">
+        <option *ngFor="let item of roles | enumKey" [value]="item.key">{{item.value}}</option>
+      </select>
+      <input type="number" formControlName="amount">
+      <button type="button" (click)="detachmentForm.removeMaxRole(i)">Remove</button>
+    </div>
+    <br>
+  </div>
+  <br>
   <label>
     Restrictions:
     <button type="button" (click)="detachmentForm.addRestriction()">Add</button>
-    <div formArrayName="restrictions" *ngFor="let item of detachmentForm.get('restrictions').controls; let i = index;">
-      <select [formGroupName]="i">
-        <option *ngFor="let item of restrictions | enumKey" [value]="item.key">{{item.value}}</option>
-      </select>
-      <br>
-    </div>
   </label>
+  <div formArrayName="restrictions" *ngFor="let item of detachmentForm.get('restrictions').controls; let i = index;">
+    <select [formGroupName]="i">
+      <option *ngFor="let item of restrictions | enumKey" [value]="item.key">{{item.value}}</option>
+    </select>
+    <button type="button" (click)="detachmentForm.removeRestriction(i)">Remove</button>
+    <br>
+  </div>
   <br>
   <label>
     <div formGroupName="benefits">
@@ -61,5 +65,5 @@
 </form>
 
 <div *ngIf="detachment">
-    {{detachment}}
+  {{detachment}}
 </div>
