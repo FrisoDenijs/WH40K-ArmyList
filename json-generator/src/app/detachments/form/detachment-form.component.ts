@@ -9,13 +9,14 @@ import { Role } from 'src/app/shared';
 })
 export class DetachmentFormComponent implements OnInit {
 
-  public roles = Role;
+  public readonly roles = Role;
 
   detachmentForm: DetachmentsForm;
   constructor() { }
 
   ngOnInit() {
     this.detachmentForm = new DetachmentsForm();
+    console.log(this.roles[0]);
   }
 
 }
