@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DetachmentsForm } from './detachments.form';
-import { Role } from 'src/app/shared';
+import { Role, Restrictions, Detachment } from '../../shared';
 
 @Component({
   selector: 'app-detachment-form',
@@ -10,13 +10,22 @@ import { Role } from 'src/app/shared';
 export class DetachmentFormComponent implements OnInit {
 
   public readonly roles = Role;
+  public readonly restrictions = Restrictions;
+
+  public detachment: string;
 
   detachmentForm: DetachmentsForm;
   constructor() { }
 
   ngOnInit() {
     this.detachmentForm = new DetachmentsForm();
-    console.log(this.roles[0]);
   }
 
+  reset() {
+    this.detachmentForm = new DetachmentsForm();
+  }
+
+  stringify() {
+    this.detachment = JSON.stringify(this.detachmentForm.getModel());
+  }
 }

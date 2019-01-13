@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { DetachmentsComponent } from './detachments/detachments.component';
 import { DetachmentFormComponent } from './detachments/form/detachment-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EnumNamePipe } from './shared';
-import { EnumKeyPipe } from './shared/pipes/enum-key.pipe';
+import { EnumNamePipe, EnumKeyPipe } from './shared';
 
 @NgModule({
   declarations: [
