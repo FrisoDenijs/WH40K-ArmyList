@@ -9,6 +9,7 @@ export class EnumKeyPipe implements PipeTransform {
     const keys = [];
     for (const enumMember in value) {
       if (!isNaN(parseInt(enumMember, 10))) {
+        // from https://stackoverflow.com/a/25452019/1984657
         const name = value[enumMember].replace(/([A-Z])/g, ' $1').trim();
 
         keys.push({key: enumMember, value: name});
