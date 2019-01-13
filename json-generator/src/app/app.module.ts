@@ -6,13 +6,15 @@ import { DetachmentsComponent } from './detachments/detachments.component';
 import { DetachmentFormComponent } from './detachments/form/detachment-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EnumNamePipe } from './shared';
+import { EnumKeyPipe } from './shared/pipes/enum-key.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetachmentsComponent,
     DetachmentFormComponent,
-    EnumNamePipe
+    EnumNamePipe,
+    EnumKeyPipe
   ],
   imports: [
     BrowserModule,

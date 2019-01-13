@@ -18,7 +18,8 @@
     <div formArrayName="minRoles" *ngFor="let item of detachmentForm.get('minRoles').controls; let i = index;">
       <div [formGroupName]="i">
         <select formControlName="battlefieldRole">
-          <option [value]="roles.HQ">{{roles.HQ | enumName: roles}}</option>
+          <!-- from https://stackoverflow.com/a/35750252/1984657 -->
+          <option *ngFor="let item of roles | enumKey" [value]="item.key">{{item.value}}</option>
         </select>
         <input type="number" formControlName="amount">
       </div>
