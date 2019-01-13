@@ -1,3 +1,32 @@
 <p>
   detachment-form works!
 </p>
+<form [formGroup]=detachmentForm>
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+
+  <label>
+    Dedicated Transports For Each:
+    <input type="number" formControlName="dedicatedTransportsForEach">
+  </label>
+
+  <label>
+    Dedicated Transports For Each:
+    <input type="number" formControlName="dedicatedTransportsForEach">
+  </label>
+
+  <label>
+    Minimum battlefield roles:
+    <button type="button" (click)="detachmentForm.addMinRole()">Add</button>
+    <div formArrayName="minRoles" *ngFor="let item of detachmentForm.get('minRoles').controls; let i = index;">
+      <div [formGroupName]="i">
+        <select formControlName="battlefieldRole">
+          <option value="roles.HQ">HQ</option>
+        </select>
+        <input type="number" formControlName="amount">
+      </div>
+    </div>
+  </label>
+</form>
