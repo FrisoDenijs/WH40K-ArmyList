@@ -39,7 +39,7 @@
             }
         ],
         "restrictions": [
-            null
+            0
         ],
         "benefits": {
             "commandPoints": 0
@@ -47,22 +47,48 @@
     },
     {
         "name": "Battalion Detachment",
-        "min": {
-            "hq": 2,
-            "troops": 3
-        },
-        "max": {
-            "hq": 3,
-            "troops": 6,
-            "elites": 6,
-            "fast-attack": 3,
-            "heavy-support": 3,
-            "flyers": 2
-        },
-        "dedicated-transports-for-each": 1,
-        "restrictions": "faction",
-        "command-benefits": {
-            "command-points": 3
+        "dedicatedTransportsForEach": 1,
+        "minRoles": [
+            {
+                "battlefieldRole": "0",
+                "amount": 2
+            },
+            {
+                "battlefieldRole": "1",
+                "amount": 3
+            }
+        ],
+        "maxRoles": [
+            {
+                "battlefieldRole": "0",
+                "amount": 3
+            },
+            {
+                "battlefieldRole": "1",
+                "amount": 6
+            },
+            {
+                "battlefieldRole": "2",
+                "amount": 6
+            },
+            {
+                "battlefieldRole": "3",
+                "amount": 3
+            },
+            {
+                "battlefieldRole": "4",
+                "amount": 3
+            },
+            {
+                "battlefieldRole": "5",
+                "amount": 3
+            }
+        ],
+        "restrictions": [
+            0
+        ],
+        "benefits": {
+            "commandPoints": 5
         }
     }
 ]

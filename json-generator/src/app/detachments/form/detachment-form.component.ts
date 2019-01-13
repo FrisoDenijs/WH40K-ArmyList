@@ -23,6 +23,7 @@ export class DetachmentFormComponent implements OnInit {
 
   reset() {
     this.detachmentForm = new DetachmentsForm();
+    this.detachment = '';
   }
 
   stringify() {
