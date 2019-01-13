@@ -1,20 +1,49 @@
 [
     {
         "name": "Patrol Detachment",
-        "min": {
-            "hq": 1,
-            "troops": 1
-        },
-        "max": {
-            "hq": 2,
-            "troops": 3,
-            "elites": 2,
-            "fast-attack": 2,
-            "heavy-support": 2,
-            "flyers": 2
-        },
-        "dedicated-transports-for-each": 1,
-        "restrictions": "faction"
+        "dedicatedTransportsForEach": 1,
+        "minRoles": [
+            {
+                "battlefieldRole": "0",
+                "amount": 1
+            },
+            {
+                "battlefieldRole": "1",
+                "amount": 1
+            }
+        ],
+        "maxRoles": [
+            {
+                "battlefieldRole": "0",
+                "amount": 2
+            },
+            {
+                "battlefieldRole": "1",
+                "amount": 3
+            },
+            {
+                "battlefieldRole": "2",
+                "amount": 2
+            },
+            {
+                "battlefieldRole": "3",
+                "amount": 2
+            },
+            {
+                "battlefieldRole": "4",
+                "amount": 2
+            },
+            {
+                "battlefieldRole": "5",
+                "amount": 2
+            }
+        ],
+        "restrictions": [
+            null
+        ],
+        "benefits": {
+            "commandPoints": 0
+        }
     },
     {
         "name": "Battalion Detachment",

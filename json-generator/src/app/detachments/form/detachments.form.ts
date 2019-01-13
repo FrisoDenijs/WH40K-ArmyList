@@ -6,9 +6,9 @@ export class DetachmentsForm extends FormGroup {
         super({
             name: new FormControl(),
             dedicatedTransportsForEach: new FormControl(),
-            minRoles: new FormArray([new MinRolesForm()]),
-            maxRoles: new FormArray([new MaxRolesForm()]),
-            restrictions: new FormArray([new DetachmentRestrictionFormControl()]),
+            minRoles: new FormArray([]),
+            maxRoles: new FormArray([]),
+            restrictions: new FormArray([]),
             benefits: new BenefitsForm()
         });
     }
