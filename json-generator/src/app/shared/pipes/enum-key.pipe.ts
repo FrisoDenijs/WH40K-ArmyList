@@ -13,11 +13,8 @@ export class EnumKeyPipe implements PipeTransform {
         const name = value[enumMember].replace(/([A-Z])/g, ' $1').trim();
 
         keys.push({key: enumMember, value: name});
-        // Uncomment if you want log
-        // console.log("enum member: ", value[enumMember]);
       }
     }
     return keys;
   }
-
 }
