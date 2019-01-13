@@ -31,13 +31,13 @@ export class DetachmentsForm extends FormGroup {
     }
 
     public addMinRole() {
-        const detachmentMin = this.get('detachmentMin') as FormArray;
-        detachmentMin.push(new MinRolesForm());
+        const minRoles = this.get('minRoles') as FormArray;
+        minRoles.push(new MinRolesForm());
     }
 
     public addMaxRole() {
-        const detachmentMax = this.get('detachmentMax') as FormArray;
-        detachmentMax.push(new MaxRolesForm());
+        const maxRoles = this.get('maxRoles') as FormArray;
+        maxRoles.push(new MaxRolesForm());
     }
 
     public addRestriction() {

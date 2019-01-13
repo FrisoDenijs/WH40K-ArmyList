@@ -6,27 +6,25 @@
     Name:
     <input type="text" formControlName="name">
   </label>
-
+  <br>
   <label>
     Dedicated Transports For Each:
     <input type="number" formControlName="dedicatedTransportsForEach">
   </label>
-
-  <label>
-    Dedicated Transports For Each:
-    <input type="number" formControlName="dedicatedTransportsForEach">
-  </label>
-
+  <br>
   <label>
     Minimum battlefield roles:
     <button type="button" (click)="detachmentForm.addMinRole()">Add</button>
     <div formArrayName="minRoles" *ngFor="let item of detachmentForm.get('minRoles').controls; let i = index;">
       <div [formGroupName]="i">
         <select formControlName="battlefieldRole">
-          <option value="roles.HQ">HQ</option>
+          <option [value]="roles.HQ">HQ</option>
         </select>
         <input type="number" formControlName="amount">
       </div>
+      <br>
     </div>
   </label>
 </form>
+
+{{roles.HQ}}
