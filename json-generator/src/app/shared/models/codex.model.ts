@@ -4,6 +4,14 @@ export class Codex {
     abilities: Ability[];
     wargearLists: string[];
     wargear: Wargear[];
+    warlordTraits: WarlordTrait[];
+    relics: Relic[];
+    psychicPowers: PsychicPower[];
+}
+
+export class Faction {
+    name: string;
+    ability: Ability;
 }
 
 export class Ability {
@@ -20,5 +28,28 @@ export class Wargear {
     armourPenetration?: string;
     damage?: string;
     abilities: string;
-    list: string;
+    lists?: string[];
+}
+
+export class WarlordTrait {
+    name: string;
+    description: string;
+    faction?: string;
+}
+
+export class Relic {
+    name: string;
+    description: string;
+    replacementWargear?: Wargear[];
+    faction?: string;
+}
+
+export class PsychicPower {
+    name: string;
+    description: string;
+    warpCharge: number;
+}
+
+export class Unit {
+    
 }
